@@ -1,0 +1,11 @@
+name: Feature request
+description: A component to save, a check to add, an improvement
+labels: [enhancement]
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: Need
+      description: What is lost or wrong after an environment copy, and what you would like the tool to do.
+    validations:
+      required: true

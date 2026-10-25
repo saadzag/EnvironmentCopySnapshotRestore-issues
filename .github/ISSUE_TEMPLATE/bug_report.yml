@@ -1,0 +1,45 @@
+name: Bug report
+description: Something does not work as expected
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Please never post secrets, connection strings or customer data.
+  - type: input
+    id: tool-version
+    attributes:
+      label: Tool version
+      description: Shown in the XrmToolBox Tool Library.
+    validations:
+      required: true
+  - type: input
+    id: xtb-version
+    attributes:
+      label: XrmToolBox version
+    validations:
+      required: true
+  - type: dropdown
+    id: step
+    attributes:
+      label: Step
+      options:
+        - Snapshot
+        - Compare
+        - Apply (restore)
+        - Snapshot content view
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you did, what you expected, what you got.
+    validations:
+      required: true
+  - type: textarea
+    id: error
+    attributes:
+      label: Error message
+      description: Text of the error, or the matching lines of the restore log (restore_..._log.json).
+      render: text
